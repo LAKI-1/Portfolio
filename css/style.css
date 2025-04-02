@@ -342,13 +342,11 @@ select {
     border: 1px solid #d4d4e3;
     cursor: pointer;
     position: fixed;
-    left: 300px;
+    left: 30px;
     top: 20px;
     z-index: 11;
     border-radius: 5px;
     background-color: #fdf9ff;
-    /* display: -ms-flexbox;
-    display: flex; */
     display: none;
     -ms-flex-align: center;
     align-items: center;
@@ -363,6 +361,7 @@ select {
     width: 18px;
     display: inline-block;
     position: relative;
+    background-color: #302e4d;
 }
 
 .aside .nav-toggler.open span {
@@ -376,6 +375,7 @@ select {
     position: absolute;
     top: -6px;
     left: 0;
+    background-color: #302e4d;
 }
 
 .aside .nav-toggler.open span::before {
@@ -391,6 +391,7 @@ select {
     position: absolute;
     top: 6px;
     left: 0;
+    background-color: #302e4d;
 }
 
 .aside .nav-toggler.open span::after {
@@ -437,6 +438,33 @@ select {
     color: #7d7d7d;
 }
 
+/* Mobile Navigation - Media Queries */
+@media screen and (max-width: 1199px) {
+    .aside {
+        left: -270px;
+    }
+
+    .aside.open {
+        left: 0;
+    }
+
+    .aside .nav-toggler {
+        display: flex;
+    }
+
+    .section {
+        left: 0;
+    }
+
+    .section.open {
+        left: 270px;
+    }
+
+    .about .about-content .personal-info .info-item p span {
+        display: block;
+        margin-left: 0;
+    }
+}
 /* Home Section */
 
 .home {
