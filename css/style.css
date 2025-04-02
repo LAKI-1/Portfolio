@@ -456,6 +456,10 @@ select {
     height: 300px;
     margin: 0 auto;
     overflow: visible;
+    background-image: url('images/Background/Internet-Website-PNG-Photos.png'); /* Add your background image here */
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
 }
 
 /* Background effect - subtle gradient with soft shadow */
@@ -515,6 +519,7 @@ select {
     transform: scale(1.02);
     transition: all 0.3s ease;
 }
+
 .home .intro h1 {
     font-size: 30px;
     color: #302e4d;
@@ -529,7 +534,6 @@ select {
     margin: 0;
     line-height: 22px;
     color: #504e70;
-
 }
 
 .home .intro .social-links {
@@ -700,21 +704,23 @@ select {
         border-bottom: 3px solid #3498db;
     }
 
-    .about .about-content .skills .skill-item h5 {
-        line-height: 1.4;
-        font-weight: 600;
-        font-size: 16px;
-        color: #302e4d;
-        text-transform: capitalize;
-        margin-top: 15px;
-        position: relative;
-        z-index: 1;
-        transition: color 0.3s ease;
-    }
+.about .about-content .skills .skill-item h5 {
+    line-height: 1.4;
+    font-weight: 600;
+    font-size: 16px;
+    color: #302e4d;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+    margin: 0 auto 10px;
+    text-align: center;
+}
 
     .about .about-content .skills .skill-item:hover h5 {
         color: #3498db;
     }
+
 
     /* Logo container - removed clip path to show full logo */
     .about .about-content .skills .skill-item .progress {
@@ -746,43 +752,7 @@ select {
         display: none;
     }
 
-    /* Tech stack logos with cleaner versions */
-    .skill-item:nth-child(1) .progress .progress-in { /* Javascript */
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png');
-    }
 
-    .skill-item:nth-child(2) .progress .progress-in { /* Wordpress */
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg');
-    }
-
-    .skill-item:nth-child(3) .progress .progress-in { /* Java */
-        background-image: url('https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg');
-    }
-
-    .skill-item:nth-child(4) .progress .progress-in { /* Bootstrap */
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg');
-    }
-
-    /* Add placeholders for additional tech stack items */
-    .skill-item:nth-child(5) .progress .progress-in {
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg');
-    }
-
-    .skill-item:nth-child(6) .progress .progress-in {
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg');
-    }
-
-    .skill-item:nth-child(7) .progress .progress-in {
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg');
-    }
-
-    .skill-item:nth-child(8) .progress .progress-in {
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg');
-    }
-
-    .skill-item:nth-child(9) .progress .progress-in {
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg');
-    }
 
     /* Advanced animations */
     @keyframes pulse-glow {
@@ -848,6 +818,19 @@ select {
             max-width: calc(100% - 20px);
         }
     }
+.skill-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.tech-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px;
+}
 .about .about-content .education {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
