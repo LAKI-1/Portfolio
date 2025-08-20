@@ -209,4 +209,33 @@ document.addEventListener('DOMContentLoaded', function() {
             navTogglerBtn.style.display = 'flex';
         }
     }
+    
+    // Add smooth scrolling for CTA buttons
+    const ctaButtons = document.querySelectorAll('.btn-modern');
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(href);
+                if (targetSection) {
+                    // Remove active class from all sections
+                    for (let i = 0; i < allSection.length; i++) {
+                        allSection[i].classList.remove('active');
+                    }
+                    // Add active class to target section
+                    targetSection.classList.add('active');
+                    
+                    // Update navigation
+                    const navLinks = document.querySelectorAll('.nav a');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === href) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            }
+        });
+    });
 });
